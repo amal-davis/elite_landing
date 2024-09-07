@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Landing Pag</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Optional: Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .banner-area {
+        position: relative;
+        height: 62.4vw;
+        background-image: url(assets/bnr-right-bg_1.png);
+        background-repeat: no-repeat;
+        background-position: right 56%;
+        background-size: 7.5%;
+    }
+
+    @media (max-width: 991px) {
+        .banner-area {
+            display: none;
+        }
+    }
+
+    .bnr-quote {
+        position: absolute;
+        width: 72%;
+        height: 11%;
+        left: 0;
+        top: 69.5%;
+        background-color: #848484;
+        padding-left: 37%;
+        text-align: center;
+        background: rgb(238, 238, 238);
+        background: -moz-linear-gradient(170deg, rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-linear-gradient(170deg, rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(170deg, rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#ffffff", GradientType=1);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        padding-right: 6%;
+        padding-left: 43%;
+        font-size: 1.6vw;
+        font-weight: 600;
+        color: #515151;
+        line-height: 1.3em;
+    }
+
+    .bnr-grn-shape {
+        width: 57%;
+        height: 100%;
+        clip-path: polygon(0% 100%, 100% 41%, 75% 0%, 70% 0, 95% 40%, 0% 96%);
+        background-color: #7fbf4d;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .bnr-shape {
+        width: 57%;
+        height: 100%;
+        clip-path: polygon(0% 97%, 96% 41%, 72% 0%, 0 0);
+        background-color: #28b291;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        top: 0;
+        left: 0;
+    }
+
+    .bnr-flat {
+        position: relative;
+        z-index: 1;
+        width: 48%;
+        bottom: 4%;
+    }
+
+    @media (max-width: 767px) {
+        .bnr-flat {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-flat {
+            width: 48%;
+        }
+    }
+
+    .dsk-bnr-text {
+        position: absolute;
+        max-width: 38%;
+        left: 48%;
+        top: 16%;
+        font-size: 1.26vw;
+    }
+
+    .dsk-bnr-text h2 {
+        font-size: 78%;
+        text-transform: none;
+        color: #545454;
+        font-weight: 400;
+        margin-bottom: 7%;
+    }
+
+    .dsk-bnr-text h1 {
+        font-size: 170%;
+        line-height: 110%;
+        text-transform: uppercase;
+    }
+
+    .dsk-bnr-text h1>span {
+        display: block;
+        font-size: 37.5%;
+        line-height: 100%;
+    }
+
+    .krera-bnr-icn {
+        margin-top: 7%;
+    }
+
+    .krera-bnr-icn>img {
+        width: 38%;
+        margin-left: 21%;
+    }
+
+    @media (max-width: 991px) {
+        .krera-bnr-icn>img {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .krera-bnr-icn>img {
+            margin-left: 0;
+        }
+    }
+
+    .smple-btn {
+        margin-left: 6%;
+        padding-top: 22px;
+    }
+
+    @media (max-width: 991px) {
+        .smple-btn {
+            margin-left: 0;
+        }
+    }
+
+    .smple-btn a {
+        font-size: 0.7em;
+        color: #fff;
+        padding: 0.6em 1em;
+        background: #7fbf4d;
+        border-radius: 4px;
+        text-transform: uppercase;
+        background: linear-gradient(280deg, #28b291, #a6df7a, #7fbf4d);
+        background-size: 600% 600%;
+        -webkit-animation: AnimationName 3s ease infinite;
+        -moz-animation: AnimationName 3s ease infinite;
+        animation: AnimationName 3s ease infinite;
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+        box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+    }
+
+    .bnr-hero {
+        position: absolute;
+        left: 43.5%;
+        width: 27%;
+        top: 16%;
+        z-index: 9;
+    }
+
+    .bnr-hero>img {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 22.8%;
+        position: absolute;
+        top: 9%;
+        right: 5.5%;
+    }
+
+    @media (max-width: 1200px) {
+        .contact-form {
+            top: 9%;
+            right: 10%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .contact-form {
+            width: 45%;
+            position: inherit;
+            top: inherit;
+            right: inherit;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .contact-form {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-form {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    .form-box-wrp {
+        background-color: #fff;
+        padding: 35px 30px 45px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 1200px) {
+        .form-box-wrp {
+            padding: 21px 15px 35px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .form-box-wrp {
+            padding: 30px 20px 35px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .form-box-wrp {
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .contact-form h3 {
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 1200px) {
+        .contact-form h3 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .contact-form h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact-form h3>span {
+        font-size: 0.75em;
+    }
+
+    .wpcf7 .screen-reader-response {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        word-wrap: normal !important;
+    }
+
+    /* Input field styling */
+    .form-control,
+    .form-select {
+        border-radius: 0px;
+        box-shadow: none;
+        border: 1px solid #ced4da;
+    }
+
+    /* Input focus state */
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #000;
+        box-shadow: none;
+    }
+
+    /* Submit button styling */
+    .btn-submit {
+        background-color: #e9ecef;
+        color: #000;
+        border: 1px solid #ced4da;
+        border-radius: 0px;
+        padding: 10px;
+    }
+
+    .btn-submit:hover {
+        background-color: #ced4da;
+    }
+
+    .contact-form input,
+    .contact-form select {
+        width: 100%;
+        color: #000;
+        margin-bottom: 15px;
+        height: 50px;
+        padding: 0 15px;
+        outline-color: #7fbf4d;
+        height: 3vw;
+    }
+
+    .contact-form input,
+    .contact-form select {
+        width: 100%;
+        color: #000;
+        margin-bottom: 15px;
+        height: 50px;
+        padding: 0 15px;
+        outline-color: #7fbf4d;
+        height: 3vw;
+    }
+
+    .mobile-banner-area {
+        display: none;
+    }
+
+    @media (max-width: 991px) {
+        .mobile-banner-area {
+            display: block;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .top-bnr {
+            display: flex;
+            background-color: #fff0c3;
+            align-items: center;
+            padding-top: 2rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .top-bnr {
+            display: block;
+            padding-top: 3rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-text {
+            width: 52%;
+            padding-left: 10%;
+            padding-bottom: 2rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .bnr-text {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-text h1 {
+            font-size: 1rem;
+            color: #545454;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-text>span {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.46rem;
+            display: block;
+            font-weight: 900;
+            line-height: 1.4em;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-text>span>span {
+            font-size: 1rem;
+            line-height: 1em;
+            display: block;
+            font-weight: 400;
+            margin-top: -0.3em;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .smple-btn {
+            margin-left: 0;
+        }
+    }
+
+    .smple-btn a {
+        font-size: 0.7em;
+        color: #fff;
+        padding: 0.6em 1em;
+        background: #7fbf4d;
+        border-radius: 4px;
+        text-transform: uppercase;
+        background: linear-gradient(280deg, #28b291, #a6df7a, #7fbf4d);
+        background-size: 600% 600%;
+        -webkit-animation: AnimationName 3s ease infinite;
+        -moz-animation: AnimationName 3s ease infinite;
+        animation: AnimationName 3s ease infinite;
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+        box-shadow: 0px 0px 8px 2px rgba(13, 69, 19, 0.35);
+    }
+
+    @media (max-width: 991px) {
+        .bnr-flat {
+            width: 48%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .bnr-flat {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .bnr-flat>img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .bottom-bnr {
+            display: block;
+            padding: 3rem 15px 4rem;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .founder-blk {
+            width: 55%;
+            padding-left: 10%;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .founder-blk {
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 3rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .founder-img>img {
+            width: 75%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .founder-img>img {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .founder-quote {
+            background: rgb(226, 226, 226);
+            background: -moz-linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            background: linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2", endColorstr="#ffffff", GradientType=1);
+            border-radius: 6px;
+            -webkit-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+            line-height: 1.4em;
+            padding: 18px 2%;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .founder-quote>p {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .contact-form {
+            top: 9%;
+            right: 10%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .contact-form {
+            width: 45%;
+            position: inherit;
+            top: inherit;
+            right: inherit;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .contact-form {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-form {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .form-box-wrp {
+            padding: 21px 15px 35px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .form-box-wrp {
+            padding: 30px 20px 35px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .form-box-wrp {
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        .contact-form input,
+        .contact-form select {
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .contact-form input,
+        .contact-form select {
+            height: 45px;
+        }
+    }
+
+    .community-sec {
+        padding-left: 14%;
+        position: relative;
+        margin-top: -14px;
+    }
+
+    @media (max-width: 991px) {
+        .community-sec {
+            padding: 0 15px;
+            max-width: 92%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .community-sec {
+            max-width: 370px;
+        }
+    }
+
+    .community-design-element {
+        position: absolute;
+        left: 0;
+        width: 31.3%;
+        top: 11%;
+    }
+
+    @media (max-width: 991px) {
+        .community-design-element {
+            display: none;
+        }
+    }
+
+    .community-top {
+        max-width: 720px;
+    }
+
+    @media (max-width: 991px) {
+        .community-top {
+            text-align: center;
+            max-width: 660px;
+            margin: 0 auto;
+        }
+    }
+
+    h2 {
+        color: #2d2d2d;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .nearby-list {
+        padding-left: 24%;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 991px) {
+        .nearby-list {
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .nearby-list.d-flex {
+            display: block !important;
+        }
+    }
+
+    .neraby-col {
+        width: 33.33%;
+        margin: 0 2.9%;
+    }
+
+    @media (max-width: 991px) {
+        .neraby-col {
+            margin-top: 0 !important;
+            margin: 0 2%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .neraby-col {
+            width: 100%;
+            margin: 0;
+            display: flex;
+        }
+    }
+
+    .neraby-block {
+        background: #28b291;
+        background: -moz-linear-gradient(126deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        background: -webkit-linear-gradient(126deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        background: linear-gradient(126deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#28b291", endColorstr="#7fbf4d", GradientType=1);
+        border-radius: 8px;
+        -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 991px) {
+        .neraby-block {
+            -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.22);
+            -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .neraby-block {
+            width: 50%;
+            margin: 0 2% 0.75rem;
+        }
+    }
+
+    .neraby-block-in {
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        text-align: center;
+        padding: 30px 5%;
+        min-height: 275px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    @media (max-width: 991px) {
+        .neraby-block-in {
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .neraby-block-in {
+            min-height: inherit;
+            margin-bottom: 0;
+        }
+    }
+
+    span.distance-from {
+        color: #303030;
+        font-size: 0.86rem;
+    }
+
+    @media (max-width: 767px) {
+        span.distance-from {
+            font-size: 0.8rem;
+        }
+    }
+
+    span.neraby-icons {
+        display: block;
+        margin-top: 0.5em;
+    }
+
+    .neraby-icons img {
+        width: 50%;
+    }
+
+    .amenities-box {
+        background: rgb(226, 226, 226);
+        background: -moz-linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(0deg, rgba(226, 226, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2", endColorstr="#ffffff", GradientType=1);
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    /* Remove padding and margin between items */
+    #amenitiesSec {
+        background-color: transparent !important;
+        /* Ensure the carousel container has a transparent background */
+    }
+
+    #amenitiesSec .item {
+        background-color: transparent !important;
+        /* Ensure each item has a transparent background */
+        box-shadow: none;
+        /* Remove any shadow if it's adding a dark outline */
+        margin: 0;
+        /* Ensure no additional margin is causing visual background */
+        padding: 0;
+        /* Remove padding */
+    }
+
+    @media (max-width: 1350px) {
+        #amenitiesSec {
+            padding: 0 45px;
+        }
+    }
+
+    #amenitiesSec .owl-item img {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .amenities-box>span {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.86rem;
+        line-height: 1.3em;
+    }
+
+    @media (max-width: 576px) {
+        .amenities-box>span {
+            font-size: 14px;
+            line-height: 1.3em;
+        }
+    }
+
+    .custom-nav {
+        position: relative;
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .custom-prev,
+    .custom-next {
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: #333;
+        border-radius: 50%;
+        /* Ensures the button is a perfect circle */
+        width: 40px;
+        /* Sets a fixed width */
+        height: 40px;
+        /* Sets a fixed height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        /* Remove padding to keep the circle */
+        margin: 5px;
+    }
+
+    .custom-prev {
+        position: absolute;
+        left: -49px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .custom-next {
+        position: absolute;
+        right: -49px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Ensure responsiveness */
+    @media (max-width: 768px) {
+
+        .custom-prev,
+        .custom-next {
+            width: 30px;
+            height: 30px;
+            top: auto;
+            /* Remove the 'top' positioning */
+            bottom: -100px;
+            /* Position the buttons at the bottom */
+            left: 60%;
+            /* Center the buttons horizontally */
+            transform: translateX(-50%);
+            /* Center the buttons horizontally */
+            margin-left: -40px;
+            /* Adjust margin to align buttons */
+        }
+
+        .custom-prev {
+            margin-left: -80px;
+            /* Adjust for the left button */
+        }
+
+        .custom-next {
+            margin-left: 0;
+            /* Adjust for the right button */
+        }
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        header {
+            padding: 15px 0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        header {
+            position: inherit;
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+
+    .logo-div {
+        padding-left: 6%;
+        padding-top: 2rem;
+    }
+
+    @media (max-width: 991px) {
+        .logo-div {
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+
+    h2.btm-space {
+        margin-bottom: 3rem;
+    }
+
+    @media (max-width: 991px) {
+        h2.btm-space {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    section.contact-sec {
+        padding: 9rem 0 4rem;
+        background-repeat: no-repeat;
+        background-position: left 10rem, right 1rem;
+        background-size: 10%;
+    }
+
+    @media (max-width: 991px) {
+        section.contact-sec {
+            padding: 4rem 0 14rem;
+            background-position: left 6rem, right 1rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        section.contact-sec {
+            background-image: none !important;
+            padding: 3rem 0 4rem;
+        }
+    }
+
+    .contact-bg-blk {
+        text-align: center;
+        padding: 4rem 0;
+        opacity: 0.9;
+        background: #28b291;
+        background: -moz-linear-gradient(170deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        background: -webkit-linear-gradient(170deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        background: linear-gradient(170deg, rgb(40, 178, 145, 1) 0%, rgb(127, 191, 77, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff0c3", endColorstr="#7f3ea2", GradientType=1);
+        -webkit-box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 991px) {
+        .contact-bg-blk {
+            padding: 1.5rem 0 2rem;
+        }
+    }
+
+    .call-text-blk {
+        max-width: 590px;
+        margin: 0 auto;
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    @media (max-width: 767px) {
+        .call-text-blk {
+            padding-left: 0;
+        }
+    }
+
+    .blk-icon {
+        width: 15%;
+    }
+
+    .blk-icon img {
+        width: 100%;
+    }
+
+    .blk-text {
+        width: 80%;
+        color: #fff;
+        text-shadow: 3px 3px 25px rgba(0, 0, 0, 0.4);
+        font-size: 1.2rem;
+        border-left: 1px solid #fff;
+        padding: 0.5em 0 0.5em 5%;
+        margin-left: 5%;
+    }
+
+    @media (max-width: 767px) {
+        .blk-text {
+            font-size: 1rem;
+        }
+    }
+
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    .about-sec {
+        display: flex;
+        padding: 6rem 4% 12rem 1%;
+        background-repeat: no-repeat;
+        background-position: left 89%;
+        background-size: 9%;
+    }
+
+    @media (max-width: 991px) {
+        .about-sec {
+            flex-direction: column;
+            max-width: 92%;
+            margin: 0 auto;
+            padding: 4rem 15px 4rem;
+            background-image: none !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .about-sec {
+            background-image: none !important;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .about-sec {
+            padding-bottom: 50px;
+        }
+    }
+
+    section.customers-testimony {
+        margin-top: -8rem;
+    }
+
+    @media (max-width: 767px) {
+        section.customers-testimony {
+            margin-top: 0;
+        }
+    }
+
+    h2.btm-space {
+        margin-bottom: 3rem;
+    }
+
+    @media (max-width: 991px) {
+        h2.btm-space {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .video-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* Ensure space between items */
+    }
+
+    .video-thumb-blk {
+        width: 48%;
+        /* Set width to 48% to allow 2 items per row with margins */
+        margin-bottom: 15px;
+    }
+
+    /* Adjust spacing between the two items in a row */
+    .video-thumb-blk:not(:nth-child(2n)) {
+        margin-right: 4%;
+    }
+
+    /* Ensure no margin on the last item in a row */
+    .video-thumb-blk:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    /* Media query to ensure 2 sections per row in mobile view as well */
+    @media (max-width: 767px) {
+        .video-thumb-blk {
+            width: 48%;
+            /* Still maintain 2 per row in mobile view */
+            margin: 0 2% 15px 0;
+        }
+
+        .video-thumb-blk:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+    .video-thumb-blk>a {
+        display: block;
+        position: relative;
+    }
+
+    .video-thumb-blk img {
+        width: 100%;
+    }
+
+    span.play-icn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+    }
+
+    .aprtmnt-detail {
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 767px) {
+        .aprtmnt-detail {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 70px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .aprtmnt-detail {
+            margin-bottom: 50px;
+        }
+    }
+
+    .img-wrp {
+        position: relative;
+    }
+
+    .img-wrp>h6 {
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        font-size: 0.95rem;
+        width: 100%;
+        background-repeat: no-repeat;
+        padding: 0.7em 12px;
+        line-height: 1.5em;
+        background-position: right center;
+        background-color: #ffe32b;
+        text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+        .img-wrp>h6 {
+            font-size: 0.88rem;
+        }
+    }
+
+    .aprtmnt-adrs {
+        padding-top: 40px;
+        padding-bottom: 55px;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+    }
+
+    @media (max-width: 1200px) {
+        .aprtmnt-adrs {
+            padding-top: 30px;
+            padding-bottom: 45px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .aprtmnt-adrs {
+            min-height: 300px;
+        }
+    }
+
+    .aprtmnt-place {
+        font-family: "futura-md";
+        font-size: 1rem;
+        line-height: 1.3rem;
+        margin-top: 35px;
+    }
+
+    @media (max-width: 1200px) {
+        .aprtmnt-place {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            line-height: 1.2em;
+            padding: 0 5px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .aprtmnt-place {
+            margin-top: 20px;
+        }
+    }
+
+    .aprtmnt-place>span {
+        display: block;
+    }
+
+    .aprtmnt-ftures.d-flex {
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 2.5%;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+    }
+
+    .indi-fture {
+        width: 45%;
+        border: 1px solid #ececec;
+        margin: 0 2.5%;
+        margin-bottom: 16px;
+        padding: 27px 0;
+    }
+
+    @media (max-width: 1200px) {
+        .indi-fture {
+            padding: 16px 0 20px;
+        }
+    }
+
+    .indi-fture img {
+        margin: 0 auto;
+        transform: scale(0.87);
+        -webkit-transform: scale(0.87);
+        -moz-transform: scale(0.87);
+        -ms-transform: scale(0.87);
+        -o-transform: scale(0.87);
+    }
+
+    @media (max-width: 1200px) {
+        .indi-fture img {
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.88);
+        }
+    }
+
+    @media (max-width: 991px) {
+        .indi-fture img {
+            transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            -o-transform: scale(0.7);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .indi-fture img {
+            width: inherit !important;
+        }
+    }
+
+    .indi-fture>span {
+        font-size: 0.9rem;
+        font-family: "futura-md";
+        display: block;
+    }
+
+    .btn-blk {
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        padding-bottom: 45px;
+    }
+
+    @media (max-width: 991px) {
+        .btn-blk {
+            padding-bottom: 35px;
+        }
+    }
+
+    .dflt-btn {
+        background-color: #ff8400;
+        color: #fff;
+        display: inline-block;
+        padding: 0 18px;
+        position: relative;
+        border-radius: 5px;
+        line-height: 2.5rem;
+
+    }
+
+    .aprtmnt-detail a.dflt-btn {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 991px) {
+        .aprtmnt-detail a.dflt-btn {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    }
+
+    .about-left {
+        width: 24%;
+        padding-right: 3.2%;
+        padding-top: 2.5rem;
+    }
+
+    @media (max-width: 991px) {
+        .about-left {
+            width: 60%;
+            margin: 0 auto;
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 3rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .about-left {
+            padding-bottom: 2rem;
+        }
+    }
+
+    .about-left>img {
+        width: 100%;
+    }
+
+    .about-right {
+        width: 76%;
+    }
+
+    @media (max-width: 991px) {
+        .about-right {
+            width: 100%;
+        }
+    }
+
+    .about-right h5 {
+        margin-top: 2.5em;
+        margin-bottom: 0.8em;
+    }
+
+    @media (max-width: 991px) {
+        .about-right h5 {
+            margin-top: 1.7em;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .brand-logos {
+        padding-top: 5rem;
+        padding-bottom: 7rem;
+    }
+
+    @media (max-width: 1200px) {
+        .brand-logos {
+            padding-top: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .brand-logos {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .brand-logos>img {
+        margin-right: 7%;
+        display: inline-block;
+    }
+
+    @media (max-width: 767px) {
+        .brand-logos>img {
+            transform: none !important;
+            margin: 0 2px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .next-div {
+        max-width: 80%;
+    }
+
+    @media (max-width: 991px) {
+        .next-div {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .next-div {
+            max-width: 100%;
+        }
+    }
+
+    .next-div h2 {
+        text-transform: none;
+    }
+
+    @media (max-width: 991px) {
+        .next-div h2 {
+            text-transform: none;
+        }
+    }
+
+    .btns-wrap {
+        margin-top: 15px;
+    }
+
+    .dflt-btn {
+        background-color: #ff8400;
+        color: #fff;
+        display: inline-block;
+        padding: 0 18px;
+        position: relative;
+        border-radius: 5px;
+        line-height: 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+        .btns-wrap>a {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    footer {
+        background-color: #242424;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 20px 0;
+    }
+
+    @media (max-width: 1200px) {
+        footer {
+            font-size: 0.78rem;
+            padding: 16px 0;
+        }
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    footer * {
+        color: #fff;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="logo-div">
+            <img src="assets/elite_flag.png" alt="logo-image" style="width: 90px;">
+        </div>
+    </header>
+
+
+    <section class="banner-area">
+        <div class="banner-quote">
+            <p>Elite Homes </p>
+        </div>
+        <div class="bnr-grn-shape"></div>
+        <div class="bnr-shape">
+            <div class="bnr-flat">
+                <img src="assets/la-pristine_images-edited-removebg-preview.png" alt="banner" class="img-fluid">
+            </div>
+            <div class="dsk-bnr-text">
+                <h2>Closer To Thrissur’s Prominent Places and Conveniences</h2>
+                <h1>"LAPRISTINE"
+                    <span>Adatt,Thrissur, Kerala 680551</span>
+                </h1>
+                <div class="krera-bnr-icn">
+                    <img src="assets/krera-elanza-white.png" alt="">
+                </div>
+                <div class="smple-btn">
+                    <a href="">SAMPLE APARTMENT READY</a>
+                </div>
+            </div>
+        </div>
+        <div class="bnr-hero">
+            <img src="assets/ad_images.png" alt="">
+        </div>
+        <div class="contact-form" id="call-bk-first">
+            <div class="form-box-wrp">
+                <h3>Avail Exciting offers -
+                    <span>Get More Info</span>
+                </h3>
+                <div class="wpcf7 js" id="wpcf7-f269-p247-o1" lang="en-us" dir="ltr">
+                    <div class="screen-reader-response">
+
+                    </div>
+                    <div class="form-body">
+                        <form action="">
+                            <p>
+                                <span class="wpcf7-form-control-wrap">
+                                    <input type="text" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                        placeholder="Name" name="" id="">
+                                </span>
+                                <span class="wpcf7-form-control-wrap">
+                                    <input type="text" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                        placeholder="Email" name="" id="">
+                                </span>
+                                <span class="wpcf7-form-control-wrap">
+                                    <input type="text" size="40"
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                        placeholder="Phine Number" name="" id="">
+                                </span>
+                                <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit submit-btn"
+                                    name="" id="">
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile-banner-area">
+        <div class="top-bnr">
+            <div class="bnr-text">
+                <h1>Closer To Thrissur’s Prominent Places and Conveniences</h1>
+                <span>
+                    ELANZA
+                    <br>
+                    <span>KURIACHIRA, THRISSUR</span>
+                </span>
+                <div class="krera-bnr-icn">
+                    <img src="assets/krera-elanza-white.png" alt="" class="img-fluid">
+                </div>
+                <div class="smple-btn">
+                    <a href="#samplApartments">SAMPLE APARTMENT READY</a>
+                </div>
+            </div>
+            <div class="bnr-flat mt-3">
+                <img src="assets/samrudh-removebg-preview.png" alt="">
+            </div>
+        </div>
+        <div class="bottom-bnr">
+            <div class="founder-blk">
+                <div class="founder-img">
+                    <img src="assets/ad_images.png" alt="" class="img-fluid">
+                </div>
+                <div class="founder-quote">
+                    <p>Kochouseph Chittilappilly's Property Development Initiative</p>
+                </div>
+            </div>
+            <div class="contact-form" id="call-bk-second">
+                <div class="form-box-wrp">
+                    <h3>Get in touch</h3>
+                    <div class="screen-reader-response">
+                        <div class="form-body">
+                            <form action="">
+                                <p>
+                                    <span class="wpcf7-form-control-wrap">
+                                        <input type="text" size="40"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                            placeholder="Name" name="" id="">
+                                    </span>
+                                    <span class="wpcf7-form-control-wrap">
+                                        <input type="text" size="40"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                            placeholder="Email" name="" id="">
+                                    </span>
+                                    <span class="wpcf7-form-control-wrap">
+                                        <input type="text" size="40"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input"
+                                            placeholder="Phine Number" name="" id="">
+                                    </span>
+                                    <input type="submit" class="wpcf7-form-control has-spinner wpcf7-submit submit-btn"
+                                        name="" id="">
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="community-sec">
+        <div class="community-design-element">
+            <img src="assets/design-element_4.png" alt="">
+        </div>
+        <div class="community-top">
+            <h2>The community</h2>
+            <p>The neighbourhoods of Veegaland Elanza allows you quick access to major shopping facilities, medical
+                facilities, schools and sports hubs.</p>
+        </div>
+        <div class="nearby-list d-flex">
+            <div class="neraby-col">
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>St Josephs Church </h5>
+                        <span class="distance-from">(650 M)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/church.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>Sobha City Mall</h5>
+                        <span class="distance-from">(650 M)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/mall.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="neraby-col">
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>IES Public School</h5>
+                        <span class="distance-from">(5 KM)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/school.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>Amala Hospital</h5>
+                        <span class="distance-from">(650 M)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/hospital.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="neraby-col">
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>Public Transportation </h5>
+                        <span class="distance-from">(Near By)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/transport.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+                <div class="neraby-block">
+                    <div class="neraby-block-in">
+                        <h5>Vadakumnathan Temple</h5>
+                        <span class="distance-from">(Near By)</span>
+                        <span class="neraby-icons">
+                            <img src="assets/temple.png" alt="" class="img-fluid">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div class="container py-5" style="margin-top: 140px;">
+        <h2 class="btm-space">Amenities and Specifications</h2>
+        <div class="owl-carousel owl-theme" id="amenitiesSec" style="background-color: transparent !important;">
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Barbeque.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Barbeque</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/gym.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Gym</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Indoor_games.png" class="img-fluid" alt="">
+                    </div>
+                    <span>indoor games</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Landacape_Icon.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Landscape</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Multi_Sport_Icon.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Multi Sport</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/playarea.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Play Area</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Swimming_pool.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Swimming Pool</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Walkway.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Walkway</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="amenities-box">
+                    <div>
+                        <img src="assets/Yoga_Studio.png" class="img-fluid" alt="">
+                    </div>
+                    <span>Yoga Studio</span>
+                </div>
+            </div>
+        </div>
+        <div class="custom-nav">
+            <button class="custom-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="custom-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+
+
+    <div class="container" style="margin-top: 140px;" id="gallery">
+        <h2>Gallery</h2>
+
+        <div class="row">
+            <div class="col-md-3 col-6 mb-4">
+                <a href="assets/Frame 292.png" data-fancybox="galleries">
+                    <img src="assets/Frame 292.png" alt="Image 1" class="img-fluid gallery-img">
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <a href="assets/Frame 302.png" data-fancybox="galleries">
+                    <img src="assets/Frame 302.png" alt="Image 2" class="img-fluid gallery-img">
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <a href="assets/Frame 306.png" data-fancybox="galleries">
+                    <img src="assets/Frame 306.png" alt="Image 3" class="img-fluid gallery-img">
+                </a>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <a href="assets/inddustrial_image.png" data-fancybox="galleries">
+                    <img src="assets/inddustrial_image.png" alt="Image 4" class="img-fluid gallery-img">
+                </a>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+
+    <section class="contact-sec mt-5"
+        style="background-image: url('assets/design-element_2.png'), url('assets/design-element_3.png');">
+        <div class="contact-bg-blk">
+            <div class="container">
+                <div class="call-text-blk">
+                    <div class="block-blk">
+                        <div class="blk-icon">
+
+
+                            <a
+                                href="https://api.whatsapp.com/send?phone=+91 9746542222&text=Please%20send%20all%20your%20project%20details.">
+
+                                <img src="assets/whatsapp-icn.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="blk-text">
+                            <span>Now you can stay connected on WhatsApp. Start a WhatsApp Conversation with a Veegaland
+                                Homes Manager.
+
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="block-blk">
+                        <div class="blk-icon">
+                            <a href="tel:+919746542222">
+                                <img src="assets/phone-icn.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="blk-text">
+                            <span>
+                                Click on the Phone Icon to call
+                                <br>
+                                <b>+91 9746774444</b>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-sec">
+        <div class="container">
+            <h5>Elite Lapristine,  Villas In Thrissur Of Quality And Comfort</h5>
+            <p>Industrialization and technology have helped a lot in the advancement of mankind, but it has taken its
+                share of tolls too. Pollution and toxic effluence are a growing source of health concern now. This is
+                why the Elite Developers in Thrissur came up with this spectacular villa project which is an ode to
+                living with nature. The 'La Pristine' villas are affluent 3BHK villas in Thrissur that are located in a
+                virtual plantation of beautiful trees and orchards.
+
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="customers-testimony">
+        <div class="container">
+            <h2 class="btm-space">what our customers say?</h2>
+            <div class="video-gallery">
+                <div class="video-thumb-blk">
+                    <a href="https://youtu.be/f6Zuv0KrEUc?si=69RrSfH6_qwyunz5" data-fancybox="nearby-gallery">
+                        <img src="assets/mqdefault.jpg" alt="">
+
+                        <span class="play-icn">
+                            <img src="assets/play-icn.png" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="video-thumb-blk">
+                    <a href="https://youtu.be/AFeZorXeI8w?si=U77H2wQhP8SbMhwH" data-fancybox="nearby-gallery">
+                        <img src="assets/mqdefault2.jpg" alt="">
+
+                        <span class="play-icn">
+                            <img src="assets/play-icn.png" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="aprtmnt-detail">
+                    <div class="img-wrp kingsfort-ylw">
+                        <img src="assets/samrudi_card.png" alt="" class="img-fluid">
+                        <h6>NEW LAUNCH TRIVANDRAM</h6>
+                    </div>
+                    <div class="aprtmnt-adrs">
+                        <img src="assets/scr 2.png" alt="">
+                        <div class="aprtmnt-place">
+                            <span>
+                                <p>
+                                    Trivandram town – 12.3 km
+                                    <br>
+                                    Medical College – 12.2 km
+                                    <br>
+                                    Railway Station – 16.2km
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="aprtmnt-ftures d-flex">
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>603-1223 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/amnities-icn-2.png" alt="">
+                            </div>
+                            <span>1,2 & 3 BHK</span>
+                        </div>
+                        <!-- <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div> -->
+
+                    </div>
+                    <div class="btn-blk">
+                        <a href="" class="dflt-btn">Enquire Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="aprtmnt-detail">
+                    <div class="img-wrp kingsfort-ylw">
+                        <img src="assets/la-pristine_images-edited-removebg-preview.png" alt="" class="img-fluid">
+                        <h6>NEW LAUNCH KOZHIKODE</h6>
+                    </div>
+                    <div class="aprtmnt-adrs">
+                        <img src="assets/scrl6 2.png" alt="" class="img-fluid">
+                        <div class="aprtmnt-place">
+                            <span>
+                                <p>
+                                    Thrissur town – 9.8 km
+                                    <br>
+                                    Sobha City – 5.4 km
+                                    <br>
+                                    Medical College – 13.3km
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="aprtmnt-ftures d-flex">
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>1491-2504 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/amnities-icn-2.png" alt="">
+                            </div>
+                            <span>3,4 BHK</span>
+                        </div>
+                        <!-- <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div> -->
+
+                    </div>
+                    <div class="btn-blk">
+                        <a href="" class="dflt-btn">Enquire Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="aprtmnt-detail">
+                    <div class="img-wrp kingsfort-ylw">
+                        <img src="assets/insiginia-edited-removebg-preview.png" alt="" class="img-fluid">
+                        <h6>NEW LAUNCH KOZHIKODE</h6>
+                    </div>
+                    <div class="aprtmnt-adrs">
+                        <img src="assets/insigna.png" alt="" class="img-fluid">
+                        <div class="aprtmnt-place">
+                            <span>
+                                <p>
+                                    Thrissur town – 1.8 km
+                                    <br>
+                                    Medical College – 9.7 km
+                                    <br>
+                                    Railway Station – 240
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="aprtmnt-ftures d-flex">
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>1745-3490 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/amnities-icn-2.png" alt="">
+                            </div>
+                            <span>3,4 BHK</span>
+                        </div>
+                        <!-- <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div>
+                        <div class="indi-fture">
+                            <div>
+                                <img src="assets/aminities-icn-1.png" alt="">
+                            </div>
+                            <span>2048 - 2288 Sq Ft</span>
+                        </div> -->
+
+                    </div>
+                    <div class="btn-blk">
+                        <a href="" class="dflt-btn">Enquire Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <section class="about-sec mt-5" style="background-image: url(assets/design-element_2.png);">
+        <div class="about-left">
+            <img src="assets/samrudh-removebg-preview.png" alt="" class="img-fluid">
+        </div>
+        <div class="about-right">
+            <div class="hdng-div">
+                <a href="/">
+                    <img src="assets/elite_flag.png" alt="" class="img-fluid">
+                </a>
+            </div>
+
+
+            <h5>Experience The Legacy Of Trust & Customer Satisfaction</h5>
+            <p>Leveraging the rich legacy and unique experience of launching Kerala's own V-Guard Industries Ltd. &
+                Wonderla
+                Holidays Ltd, Veegaland Homes is the brainchild of renowned entrepreneur and humanitarian, Kochouseph
+                Chittilappilly. From the leading appliance manufacturers in India and one of the most loved chain of
+                amusement parks in the country, with parks based in Kochi, Bengaluru and Hyderabad, Veegaland Homes was
+                conceptualized to bring to you our trusted service in the realm of real estate.</p>
+
+            <p>The newest offering from the promoters of V-Guard, Wonderla and V-Star, Veegaland Homes aims to develop
+                homes
+                that cater to your needs and budget. Strict adherence to green building principles, dedicated pre and
+                post
+                sales customer services and unwavering commitment towards delivering homes on time are the cornerstones
+                of
+                Veegaland Homes. We invite you to be part of our ever-growing family of satisfied customers.
+            </p>
+            <div class="brand-logos">
+                <img src="assets/elite_parent_logo.png" alt="" class="img-fluid">
+                <img src="assets/solgen.webp" alt="" class="img-fluid">
+                <img src="assets/green_logo.webp" alt="" class="img-fluid">
+            </div>
+
+            <div class="next-div">
+                <h2>What's next?</h2>
+                <p>We understand that you are considering different options. We'd like to provide you with a complete
+                    understanding of our unique features and how we propose value for your money. Talk to one of us,
+                    simply
+                    get all your queries answered and be more informed about home features.]
+                </p>
+                <div class="btns-wrap">
+                    <a href="" class="dflt-btn enq-btn">Request a Callback
+
+                    </a>
+                    <a href="" class="dflt-btn enq-btn">Visit Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="">Privacy Policy</a>
+            <br>
+            <span>Copyright @EliteDevelopers 2024. All rights reserved</span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-u4TpppuJXFWnGmdpT0h9UHyhz5zuwcCzMkF2+5pFuUkKOK9anAI9q7GEOz+HROfZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            // Initialize FancyBox
+            $("[data-fancybox='galleries']").fancybox({
+                loop: true,  // Allow looping through the images
+                buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],  // Show slideshow, fullscreen, and close buttons
+            });
+        });
+        $(document).ready(function () {
+            // Initialize FancyBox
+            $("[data-fancybox='nearby-gallery']").fancybox({
+                loop: true,  // Allow looping through the images
+                buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],  // Show slideshow, fullscreen, and close buttons
+            });
+        });
+        $(document).ready(function () {
+            $('#amenitiesSec').owlCarousel({
+                items: 4, // Number of visible items
+                loop: true, // Infinite loop
+                margin: 33, // No margin between items
+                stagePadding: 0, // Remove stage padding
+                nav: false, // Disable default navigation
+                dots: false, // Disable dots
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1, // Show 1 item on mobile
+                    },
+                    600: {
+                        items: 3, // Show 3 items on tablets
+                    },
+                    1000: {
+                        items: 6 // Show 4 items on larger screens
+                    }
+                }
+            });
+
+            // Custom Navigation Events
+            $('.custom-next').click(function () {
+                $('#amenitiesSec').trigger('next.owl.carousel');
+            });
+            $('.custom-prev').click(function () {
+                $('#amenitiesSec').trigger('prev.owl.carousel');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

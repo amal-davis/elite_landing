@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Optional: Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-custom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    background: rgba(255, 255, 255, 0); /* Transparent initially */
+    padding-left: 20px; /* Add padding to the left */
+    padding-right: 20px; /* Add padding to the right */
+}
+.navbar-custom.scrolled {
+    background-color: white; /* Change to white on scroll */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    margin-left: 50px; /* Move logo slightly to the right */
+}
+.navbar-brand img {
+    max-height: 90px;
+}
+.whatsapp-icon {
+    font-size: 44px;
+    color: #25D366;
+    margin-right: 20px; /* Move the icon slightly to the left */
+}
+.header-image {
+    position: relative;
+    height: 100vh;
+    background: url('assets/banner_1.png') no-repeat center center/cover;
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: none; /* Hide the toggle button on smaller screens */
+    }
+    .whatsapp-icon {
+        font-size: 32px;
+        margin-right: 10px; /* Reduce margin on smaller screens */
+    }
+}
+
+.city-button {
+            border-radius: 50px;
+            border: 2px solid;
+            padding: 10px 20px;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: transparent; /* Default state */
+        }
+        .city-button img {
+            margin-right: 10px;
+            width: 30px; /* Adjust icon size */
+            height: 30px;
+        }
+        .city-button.active {
+            background-color: #62d57b; /* Active background color */
+            color: #000;
+        }
+        .city-button:hover {
+            background-color: #62d57b; /* Background color on hover */
+            color: #000; /* Text color on hover */
+        }
+        .btn-kochi {
+            border-color: #62d57b;
+            color: #000;
+        }
+        .btn-kochi:hover {
+            background-color: #62d57b;
+        }
+        .btn-kochi.active {
+            background-color: #62d57b; /* Active background color */
+            color: #000;
+        }
+      
+        
+        
+        a{
+            text-decoration: none;
+        }
+        .project-section {
+            display: none; /* Initially hide all project sections */
+        }
+        .project-section.active {
+            display: block; /* Display the active project section */
+        }
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+            margin-bottom: 30px;
+            border: none;
+        }
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .project-details {
+            padding: 15px;
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .project-location-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 350;
+        }
+        .project-location, .project-info {
+            margin: 0;
+            font-size: 14px;
+        }
+        .project-amenities {
+            margin-bottom: 15px;
+        }
+        .project-amenities .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-amenities .col-6 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .project-amenities p {
+            margin: 0;
+            font-size: 14px;
+            color: #62d57b;
+            font-weight: 350;
+        }
+        .project-amenities i{
+        font-size: 30px;
+        color: #62d57b;
+        }
+        .project-footer {
+            border-top: 1px solid #eaeaea;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-price {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .enquire-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .enquire-btn:hover {
+            background-color: #cc0000;
+        }
+        .accordion-heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #62d57b; /* Adjust color as needed */
+        }
+        .accordion-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .accordion-header {
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 1rem;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-header:hover {
+            background-color: #f1f1f1;
+        }
+        .accordion-body {
+            padding: 0 1rem;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: height 0.5s ease, opacity 0.5s ease;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .accordion-item.active .accordion-body {
+            height: auto;
+            opacity: 1;
+            padding: 1rem;
+            transition: opacity 0.5s ease 0.1s; /* Delayed opacity for smooth effect */
+        }
+        .centered-section {
+            text-align: center;
+            padding: 3rem 1rem; /* Adjust padding as needed */
+        }
+        .centered-section h2 {
+            color: #62d57b; /* Adjust heading color as needed */
+            font-weight: bold;
+            font-size: 2.5rem; /* Adjust font size as needed */
+            margin-bottom: 1rem;
+        }
+        .centered-section p {
+            color: #555; /* Adjust paragraph color as needed */
+            font-size: 1.25rem; /* Adjust font size as needed */
+            max-width: 800px; /* Control the width of the paragraph */
+            margin: 0 auto; /* Center the paragraph */
+        }
+       
+        .contact-text h3,
+        .contact-text p {
+            color: #2C6E3A; /* Text color */
+            font-weight: bold;
+            margin-bottom: 1.5rem; /* Space between items */
+            text-align: left; /* Align text left */
+            position: relative;
+            text-align: center;
+        }
+        .contact-text p {
+            font-weight: 350;
+        }
+        
+        .contact-form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h4 {
+            color: #F28A00; /* Heading color */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0; /* No border radius */
+            box-sizing: border-box;
+        }
+        .contact-form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #2C6E3A;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0; /* No border radius */
+        }
+        .contact-form button[type="submit"]:hover {
+            background-color: #235c2e;
+        }
+        /* .info-section {
+            padding: 3rem 1rem;
+        } */
+        .info-section .image-container {
+            text-align: center;
+        }
+        .info-section .image-container img {
+            max-width: 100%;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        .info-section .content-container {
+            color: #2C6E3A;
+        }
+        .info-section .content-container h2 {
+            font-weight: bold;
+            font-size: 2rem;
+            color: #2C6E3A;
+        }
+        .info-section .content-container h4 {
+            font-weight: normal;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #6D6D6D;
+        }
+        .info-section .content-container p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .info-section .logos-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .info-section .logos-container img {
+            max-width: 100px;
+            margin: 0 15px;
+        }
+        @media (max-width: 991px) {
+            .info-section {
+                padding: 2rem 1rem;
+            }
+            .info-section .content-container h2 {
+                font-size: 1.75rem;
+            }
+            .info-section .content-container h4 {
+                font-size: 1.25rem;
+            }
+            .info-section .content-container p {
+                font-size: 0.9rem;
+            }
+            .info-section .logos-container img {
+                max-width: 80px;
+                margin: 0 10px;
+            }
+        }
+        .next-section h2 {
+            color: #2C6E3A; /* Heading color */
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .next-section p {
+            color: #555;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .next-section .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .next-section .btn {
+            background-color: #F28A00;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .next-section .btn:hover {
+            background-color: #e07a00;
+        }
+        @media (max-width: 767px) {
+            .next-section .btn-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        .footer {
+            background-color: #1a1a1a; /* Dark background color */
+            padding: 1rem 0;
+            color: #888; /* Light gray text color */
+            text-align: center;
+        }
+        .footer a {
+            color: #007bff; /* Link color */
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+</style>
+<body>
+    
+
+
+    <header class="header-image">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/elite_flag.png" alt="Logo" class="img-fluid">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <!-- Your nav items go here -->
+                    </ul>
+                </div>
+                <a class="nav-link whatsapp-icon" href="https://wa.me/your-phone-number" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+
+
+    <div class="container mt-5">
+        <div class="centered-section">
+            <h2>Biophilic Urban Home</h2>
+            <p>Elite Developers is dedicated to "building lifestyles" in the truest sense. For us, it goes beyond merely constructing structures. We craft experiences that elevate everyday living. This driving philosophy is ingrained in our DNA, guiding us to create world-class, quality homes and communities that resonate with discerning individuals.</p>
+        </div>
+    </div>
+
+
+    <div class="container text-center mt-5">
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <button  class="city-button btn-kochi" id="thrissur-button" onclick="showProjectSection('thrissur-projects')">
+                    <img src="assets/thrissur.png" alt="Thrissur Icon">
+                    Thrissur
+                </button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <button  class="city-button btn-kochi" id="trivandrum-button" onclick="showProjectSection('trivandrum-projects')">
+                    <img src="assets/trivandram.png" alt="Trivandrum Icon">
+                    Trivandram
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div id="thrissur-projects" class="project-section active">
+            <div class="row">
+                <div class="col-12 col-md-6 pt-5">
+                    <div class="project-card">
+                        <img src="assets/la-pristine_images.webp" class="img-fluid" alt="Green Fort">
+                        <div class="project-details">
+                            <h5 class="project-title">Lapristine</h5>
+                            <div class="project-location-info">
+                                <p class="project-location mt-3"><i class="fas fa-map-marker-alt"></i> &nbsp; Adatt, Thrissur</p>
+                                <p class="project-info mt-3"><i class="fas fa-bed"></i> &nbsp;3, 4 BHK</p>
+                            </div>
+                            <div class="project-amenities">
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-dumbbell"></i> &nbsp;<p> Fitness Center</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-child"></i> &nbsp;<p> Children Play Area</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-swimming-pool"></i> &nbsp;<p> Swimming Pool</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-gamepad"></i> &nbsp;<p> Indoor Games Hall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-footer mt-3">
+                            <span class="project-price">₹ 66 lakh* onwards</span>
+                            <button class="enquire-btn">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 pt-5">
+                    <div class="project-card">
+                        <img src="assets/insiginia.webp" class="img-fluid" alt="Maybell">
+                        <div class="project-details">
+                            <h5 class="project-title">Insignia</h5>
+                            <div class="project-location-info">
+                                <p class="project-location mt-3"><i class="fas fa-map-marker-alt"></i> &nbsp; Patturaikkal, Thrissur</p>
+                                <p class="project-info mt-3"><i class="fas fa-bed"></i> &nbsp; 3, 4 BHK</p>
+                            </div>
+                            <div class="project-amenities">
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-dumbbell"></i> &nbsp; <p> Fitness Center</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-child"></i> &nbsp;<p> Children Play Area</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-swimming-pool"></i> &nbsp;<p> Swimming Pool</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-recycle"></i> &nbsp;<p> Multi Recreation Hall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-footer mt-3">
+                            <span class="project-price">₹ 92 lakh* onwards</span>
+                            <button class="enquire-btn">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat the above row for additional projects -->
+
+        <div id="trivandrum-projects" class="project-section">
+            <div class="row">
+                <div class="col-12 col-md-6 pt-5">
+                    <div class="project-card">
+                        <img src="assets/samrudh.webp" class="img-fluid" alt="Green Fort">
+                        <div class="project-details">
+                            <h5 class="project-title">Samrudhhi</h5>
+                            <div class="project-location-info">
+                                <p class="project-location mt-3"><i class="fas fa-map-marker-alt"></i> &nbsp; Kazhakootam ,Trivandrum</p>
+                                <p class="project-info mt-3"><i class="fas fa-bed"></i> &nbsp; 1,2 & 3 BHK</p>
+                            </div>
+                            <div class="project-amenities">
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-dumbbell"></i> &nbsp;<p> Fitness Center</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-child"></i> &nbsp;<p> Children Play Area</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-swimming-pool"></i> &nbsp;<p> Swimming Pool</p>
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <i class="fas fa-gamepad"></i> &nbsp;<p> Indoor Games Hall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-footer mt-3">
+                            <span class="project-price">₹ 66 lakh* onwards</span>
+                            <button class="enquire-btn">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+    <div class="container mt-5">
+        <h2 class="accordion-heading">RESOURCE</h2>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <div class="accordion-header" id="headingOne" onclick="toggleAccordion(this)">
+                    Community Strength
+                    <span>+</span>
+                </div>
+                <div class="accordion-body">
+                    Each of our handed-over apartments fosters a strong community. Our commitment to timely delivery of fully-equipped apartments ensures close to 100% occupancy, making us the preferred builder for those seeking vibrant community living.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" id="headingTwo" onclick="toggleAccordion(this)">
+                    Biophilic Urban Living
+                    <span>+</span>
+                </div>
+                <div class="accordion-body">
+                    Our projects are designed with nature in mind, promoting a connection between residents and the environment through biophilic design principles.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" id="headingThree" onclick="toggleAccordion(this)">
+                    Eco-friendly Practices
+                    <span>+</span>
+                </div>
+                <div class="accordion-body">
+                    We implement sustainable building practices and materials in our projects to reduce the environmental impact and promote a greener future.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container contact-section mt-5 py-5">
+        <div class="row">
+            <!-- Text Section -->
+            <div class="col-md-6 contact-text text-center pt-5">
+                <h3 class="mb-5">TIMELY DELIVERY</h3>
+                <p>CONSTANT STATUS UPDATES</p>
+                <p>SUPERIOR BUILDING QUALITY</p>
+                <p>QUICK RESPONSE</p>
+            </div>
+            <!-- Form Section -->
+            <div class="col-md-6 pt-5">
+                <div class="contact-form">
+                    <h4>PLAN YOUR VISIT & GET EXCITING OFFERS</h4>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container info-section mt-5 py-5">
+        <div class="row align-items-center">
+            <!-- Image Section -->
+            <div class="col-md-5 image-container pt-5">
+                <img src="assets/video.webp" alt="Veegaland Homes Image">
+            </div>
+            <!-- Text Section -->
+            <div class="col-md-7 content-container pt-5">
+                <h2>ELITE HOMES</h2>
+                <h4>EXPERIENCE THE LEGACY OF TRUST & CUSTOMER SATISFACTION</h4>
+                <p>Elite is a 45-Year old group with diversified business interests. We are based in South India, with our businesses sprawling across sectors such as: International Trade, Food Processing, Real Estate and Construction. As an organization, we owe our remarkable success to teamwork and building long-term relationships. Today, being a household name, Elite stands firmly on its traditional values and is on the path of achieving unprecedented growth.</p>
+                <p>Elite Developers is run by professionals with a passion for quality and offers you spacious luxury apartments and villa homes developed with an eye for great design employing the best resources.</p>
+            
+            
+                <div class="row justify-content-center logos-container mt-5">
+                    <div class="col-4 col-md-2 text-center">
+                        <img src="assets/elite_parent_logo.png" alt="V-Guard Logo">
+                    </div>
+                    <div class="col-4 col-md-2 text-center">
+                        <img src="assets/solgen.webp" alt="Wonderla Logo">
+                    </div>
+                    <div class="col-4 col-md-2 text-center">
+                        <img src="assets/green_logo.webp" alt="VStar Logo">
+                    </div>
+                </div>
+                <div class="container next-section mt-5">
+                    <h2>WHAT'S NEXT?</h2>
+                    <p>We understand that you are considering different options. We'd like to provide you with a complete understanding of our unique features and how we propose value for your money. Talk to one of us, simply get all your queries answered and be more informed about home features.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Request a Callback</a>
+                        <a href="#" class="btn">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logos Section -->
+        
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="#">Privacy Policy</a></p>
+            <p>Copyright © Elite Homes 2024. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-u4TpppuJXFWnGmdpT0h9UHyhz5zuwcCzMkF2+5pFuUkKOK9anAI9q7GEOz+HROfZ" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+<script>
+   // JavaScript to change navbar background color on scroll
+   window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) { // Adjust this value according to your needs
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        function showProjectSection(sectionId, button) {
+            // Hide all project sections
+            var sections = document.querySelectorAll('.project-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            var buttons = document.querySelectorAll('.btn-kochi');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Show the selected project section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Set the clicked button as active
+            button.classList.add('active');
+        }
+        function toggleAccordion(element) {
+            var item = element.parentElement;
+            var isActive = item.classList.contains('active');
+
+            // Close all accordion items
+            var items = document.querySelectorAll('.accordion-item');
+            items.forEach(function(item) {
+                item.classList.remove('active');
+                item.querySelector('.accordion-header span').textContent = '+';
+            });
+
+            // Open the clicked item if it was not already active
+            if (!isActive) {
+                item.classList.add('active');
+                element.querySelector('span').textContent = '-';
+            }
+        }
+</script>
+
+</body>
+</html>

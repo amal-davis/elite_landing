@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Optional: Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+</head>
+<style>
+     .emi-calculator {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .results-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.result-item {
+    margin: 20px 0;
+}
+
+.result-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.result-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+.cause, .causes {
+    color: #000; /* Default text color */
+    border: 1px solid #ccc; /* Default border color */
+}
+
+.cause.active, .cause:active,
+.causes.active, .causes:active {
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color */
+    border-color: #28a745; /* Green border color */
+}
+
+.cause:hover, .causes:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text on hover */
+    border-color: #28a745; /* Green border on hover */
+}
+.disclaimer-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+</style>
+<body>
+    
+
+
+
+
+
+
+    <div class="container emi-calculator">
+        <h3 class="text-center mb-4">EMI Calculator</h3>
+        <div class="row">
+            <!-- Left Side Inputs -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="loanAmount" class="form-label">Loan Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text currency-symbol">₹</span>
+                        <input type="number" id="loanAmount" class="form-control" placeholder="Enter Loan Amount">
+                    </div>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="interestRate" class="form-label">Interest Rate (%)</label>
+                    <input type="number" id="interestRate" class="form-control" placeholder="Enter Interest Rate">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="loanTenure" class="form-label">Loan Tenure</label>
+                    <div class="input-group">
+                        <input type="number" id="loanTenure" class="form-control" placeholder="Enter Tenure">
+                        <button class="btn cause" id="yearBtn">Yr</button>
+                        <button class="btn causes" id="monthBtn">Mo</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right Side Results -->
+            <div class="col-md-6">
+                <div class="results-section">
+                    <div class="result-item">
+                        <h4>Loan EMI</h4>
+                        <p id="emiResult">₹ 0</p>
+                    </div>
+                    <div class="result-item">
+                        <h4>Total Interest Payable</h4>
+                        <p id="totalInterest">₹ 0</p>
+                    </div>
+                    <div class="result-item">
+                        <h4>Total of Payments (Principal + Interest)</h4>
+                        <p id="totalPayment">₹ 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-12">
+            <p class="disclaimer-text">
+                <strong>Disclaimer:</strong> Elite Developers has made available this website solely for educational and informative purposes with regard to the real estate sector and no warranty is made with respect to the accuracy or reliability of the information provided. There is no assurance that any statement contained or cited herein is complete, correct or precise and the same is not to be construed as legal advice on the matter. Elite Developers has the right to alter or modify any content on the website at its sole discretion. Elite Developers disowns any liability that may arise in connection with the use of this information. Interested persons are advised to apprise themselves of necessary information before investing/purchasing any property.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-u4TpppuJXFWnGmdpT0h9UHyhz5zuwcCzMkF2+5pFuUkKOK9anAI9q7GEOz+HROfZ" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        // JavaScript logic to calculate EMI
+    document.addEventListener('DOMContentLoaded', function() {
+        let loanTenureType = 'years'; // Default tenure type
+
+        // Handle tenure button clicks
+        document.getElementById('yearBtn').addEventListener('click', function() {
+            loanTenureType = 'years';
+            document.getElementById('yearBtn').classList.add('btn-primary');
+            document.getElementById('monthBtn').classList.remove('btn-primary');
+        });
+
+        document.getElementById('monthBtn').addEventListener('click', function() {
+            loanTenureType = 'months';
+            document.getElementById('monthBtn').classList.add('btn-primary');
+            document.getElementById('yearBtn').classList.remove('btn-primary');
+        });
+
+        // Calculate EMI
+        document.getElementById('loanTenure').addEventListener('input', calculateEMI);
+        document.getElementById('loanAmount').addEventListener('input', calculateEMI);
+        document.getElementById('interestRate').addEventListener('input', calculateEMI);
+
+        function calculateEMI() {
+            let loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            let interestRate = parseFloat(document.getElementById('interestRate').value);
+            let loanTenure = parseFloat(document.getElementById('loanTenure').value);
+
+            if (!loanAmount || !interestRate || !loanTenure) {
+                return;
+            }
+
+            // Convert interest rate into monthly
+            let monthlyInterestRate = interestRate / 12 / 100;
+
+            // Convert loan tenure to months if years are selected
+            if (loanTenureType === 'years') {
+                loanTenure *= 12;
+            }
+
+            // Calculate EMI using the formula
+            let emi = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTenure)) / (Math.pow(1 + monthlyInterestRate, loanTenure) - 1);
+            emi = emi.toFixed(2);
+
+            // Calculate total interest and total payment
+            let totalPayment = (emi * loanTenure).toFixed(2);
+            let totalInterest = (totalPayment - loanAmount).toFixed(2);
+
+            // Display results
+            document.getElementById('emiResult').innerText = `₹ ${emi}`;
+            document.getElementById('totalInterest').innerText = `₹ ${totalInterest}`;
+            document.getElementById('totalPayment').innerText = `₹ ${totalPayment}`;
+        }
+    });
+    </script>
+</body>
+</html>
